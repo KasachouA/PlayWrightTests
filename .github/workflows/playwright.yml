@@ -31,22 +31,26 @@ jobs:
       run: dotnet test --settings ./Tests/bin/Debug/net8.0/Runsettings/Test.runsettings --logger:trx --results-directory ./TestResults
 
     - name: Install Allure Commandline
+      if: always()
       run: |
         curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.14.0/allure-2.14.0.zip
         unzip allure.zip -d ./allure
         sudo mv ./allure/allure-2.14.0 /usr/local/bin/allure
 
     - name: Generate Allure Report
+      if: always()
       run: |
         allure generate ./TestResults --clean -o allure-report
 
     - name: Upload Allure Report to GitHub Pages
+      if: always()
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./allure-report
 
     - name: Archive test results
+      if: always()
       uses: actions/upload-artifact@v4
       with:
         name: test-results
