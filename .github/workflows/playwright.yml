@@ -28,7 +28,7 @@ jobs:
       run: npx playwright install
 
     - name: Run tests with NUnit and Playwright
-      run: dotnet test --settings ./Runsettings/Test.runsettings --logger:trx --results-directory ./TestResults
+      run: dotnet test --settings ./Tests/bin/Debug/net8.0/Runsettings/Test.runsettings --logger:trx --results-directory ./TestResults
 
     - name: Install Allure Commandline
       run: |
