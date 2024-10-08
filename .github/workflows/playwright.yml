@@ -14,10 +14,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Setup .NET Core
-      uses: actions/setup-dotnet@v2
+      uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
@@ -33,7 +33,7 @@ jobs:
     - name: Install Allure Commandline
       if: always()
       run: |
-        curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.14.0/allure-2.14.0.zip
+        curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.30.0/allure-2.30.0.zip
         unzip allure.zip -d ./allure
         sudo mv ./allure/allure-2.14.0 /usr/local/bin/allure
 
@@ -44,7 +44,7 @@ jobs:
 
     - name: Upload Allure Report to GitHub Pages
       if: always()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./allure-report

@@ -16,7 +16,7 @@ namespace Tests.UITests
         {
             _learnAndPracticeAutomationPage = new LearnAndPracticeAutomationPage(Page);
 
-            await Expect(_learnAndPracticeAutomationPage.PageNameText).ToHaveTextAsync("Wecome to your software automation practice website!");
+            await Expect(_learnAndPracticeAutomationPage.PageNameText).ToHaveTextAsync("Welcome to your software automation practice website!");
         }
     }
 }
