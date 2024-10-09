@@ -24,34 +24,32 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
 
-    - name: Install Playwright browsers
+    - name: Install Playwright
       run: npx playwright install
 
-    - name: Run tests with NUnit and Playwright
-      run: dotnet test --settings ./Tests/bin/Debug/net8.0/Runsettings/Test.runsettings --logger:trx --results-directory ./TestResults
+    - name: Run tests
+      run: dotnet test --settings TestSettings.runsettings
 
-    - name: Install Allure Commandline
+    - name: Get Allure history
       if: always()
-      run: |
-        curl -o allure.zip -L https://github.com/allure-framework/allure2/releases/download/2.30.0/allure-2.30.0.zip
-        unzip allure.zip -d ./allure
-        sudo mv ./allure/allure-2.30.0 /usr/local/bin/allure
-
+      uses: actions/checkout@v2
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+    
     - name: Generate Allure Report
       if: always()
-      run: |
-        allure generate ./TestResults --clean -o allure-report
+      uses: simple-elf/allure-report-action@v1.7
+      with:
+        gh_pages: gh-pages
+        allure_history: allure-history
+        allure_results: bin\Debug\net8.0\allure-results
 
-    - name: Upload Allure Report to GitHub Pages
+    - name: Publish test report
       if: always()
       uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./allure-report
-
-    - name: Archive test results
-      if: always()
-      uses: actions/upload-artifact@v4
-      with:
-        name: test-results
-        path: ./TestResults
+        publish_branch: gh-pages

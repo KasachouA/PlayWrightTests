@@ -1,5 +1,7 @@
 ﻿using Allure.NUnit.Attributes;
 using CoreTestProject.Pages;
+using CoreTestProject.StaticData;
+using CoreTestProject.Utils;
 using Tests.TestFixtures;
 
 namespace Tests.UITests
@@ -8,15 +10,31 @@ namespace Tests.UITests
     [AllureSuite("Main page")]
     public class MainPageTests : BaseTest
     {
-        private LearnAndPracticeAutomationPage _learnAndPracticeAutomationPage;
+        private MainPage _mainPage;
+
+        [SetUp]
+        public void TestSetup()
+        {
+            _mainPage = new MainPage(Page);
+        }
 
         [Test]
+        [AllureOwner("Andrei Kasachou")]
         [AllureSubSuite("Main layout")]
-        public async Task MainPageTitleVerification()
+        public async Task VerifyMainPageTitle()
         {
-            _learnAndPracticeAutomationPage = new LearnAndPracticeAutomationPage(Page);
+            await Expect(_mainPage.PageNameText).ToHaveTextAsync("Welcome to your software automation practice website!");
+        }
 
-            await Expect(_learnAndPracticeAutomationPage.PageNameText).ToHaveTextAsync("Welcome to your software automation practice website!");
+        [Test]
+        [AllureOwner("Andrei Kasachou")]
+        [AllureSubSuite("Main layout")]
+        public async Task VerifyAllButtonsPresenceOnMainPage()
+        {
+            foreach (var btn in StringConstantUtil.GetAllConstants<MainPageButton>())
+            {
+                await Expect(_mainPage.Button(btn)).ToBeVisibleAsync();
+            }
         }
     }
 }

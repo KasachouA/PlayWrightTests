@@ -1,9 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <RunSettings>
-  <!-- NUnit adapter -->  
-  <NUnit>
-    <NumberOfTestWorkers>24</NumberOfTestWorkers>
-  </NUnit>
   <!-- General run configuration -->
   <RunConfiguration>
     <EnvironmentVariables>
