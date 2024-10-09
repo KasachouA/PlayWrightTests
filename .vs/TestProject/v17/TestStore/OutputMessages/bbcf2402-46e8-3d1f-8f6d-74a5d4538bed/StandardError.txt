@@ -1,0 +1,39 @@
+2024-10-08T14:05:59.642Z pw:api navigating to "https://practice-automation.com/", waiting until "load"
+2024-10-08T14:05:59.712Z pw:api   "commit" event fired
+2024-10-08T14:05:59.713Z pw:api   navigated to "https://practice-automation.com/"
+2024-10-08T14:05:59.896Z pw:api   "domcontentloaded" event fired
+2024-10-08T14:06:00.289Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/html/r20241003/r20190131/zrt_lookup_fy2021.html"
+2024-10-08T14:06:00.305Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8156930098856089&output=html&adk=293675617&adf=814277786&abgtt=7&lmt=1728395849&plat=1%3A16777216%2C3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&format=0x0&url=https%3A%2F%2Fpractice-automation.com%2F&host=ca-host-pub-2644536267352236&pra=5&wgl=1&aihb=0&asro=0&ailel=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aiael=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aifxl=29_18~30_19&aiixl=29_5~30_6&aslmct=0.7&asamct=0.7&itsi=-1&aipecl=1&uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTI5LjAuMjc5Mi43OSIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjEyOS4wLjI3OTIuNzkiXSxbIk5vdD1BP0JyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMjkuMC42NjY4LjkwIl1dLDBd&dt=1728396359988&bpp=19&bdt=279&idt=201&shv=r20241003&mjsv=m202410030101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=3227249894338&frm=20&pv=2&u_tz=180&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=44759876%2C44759927%2C44759837%2C44795922%2C95342015%2C95343454&oid=2&pvsid=3757899044821887&tmod=1109457163&wsm=1&uas=0&nvt=1&fsapi=1&fc=1920&brdim=10%2C10%2C10%2C10%2C1280%2C0%2C1296%2C808%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1.01&td=1&tdf=2&nt=1&ifi=1&uci=a!1&fsb=1&dtd=238"
+2024-10-08T14:06:00.310Z pw:api   "load" event fired
+2024-10-08T14:06:00.320Z pw:api waiting for Locator("//a[text() = 'Form Fields']")
+2024-10-08T14:06:00.342Z pw:api   locator resolved to <a rel="" class="wp-block-button__link wp-element-button" href="https://practice-automation.com/form-fields/">Form Fields</a>
+2024-10-08T14:06:00.344Z pw:api attempting click action
+2024-10-08T14:06:00.344Z pw:api   waiting for element to be visible, enabled and stable
+2024-10-08T14:06:00.365Z pw:api   element is visible, enabled and stable
+2024-10-08T14:06:00.365Z pw:api   scrolling into view if needed
+2024-10-08T14:06:00.366Z pw:api   done scrolling
+2024-10-08T14:06:00.370Z pw:api   performing click action
+2024-10-08T14:06:00.384Z pw:api   click action done
+2024-10-08T14:06:00.384Z pw:api   waiting for scheduled navigations to finish
+2024-10-08T14:06:00.422Z pw:api   "commit" event fired
+2024-10-08T14:06:00.422Z pw:api   navigated to "https://practice-automation.com/form-fields/"
+2024-10-08T14:06:00.422Z pw:api   navigated to "https://practice-automation.com/form-fields/"
+2024-10-08T14:06:00.446Z pw:api   navigations have finished
+2024-10-08T14:06:00.455Z pw:api waiting for GetByRole(AriaRole.Textbox, new() { Name = "Name" })
+2024-10-08T14:06:00.504Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/html/r20241003/r20190131/zrt_lookup_fy2021.html"
+2024-10-08T14:06:00.525Z pw:api   locator resolved to <input type="text" required="" id="name-input" name="name-input" data-cy="name-input" data-testid="name-input"/>
+2024-10-08T14:06:00.526Z pw:api   fill("Andrei")
+2024-10-08T14:06:00.526Z pw:api attempting fill action
+2024-10-08T14:06:00.527Z pw:api   waiting for element to be visible, enabled and editable
+2024-10-08T14:06:00.559Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8156930098856089&output=html&adk=293675617&adf=814277786&abgtt=7&lmt=1728385257&plat=1%3A16777216%2C3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&format=0x0&url=https%3A%2F%2Fpractice-automation.com%2Fform-fields%2F&host=ca-host-pub-2644536267352236&pra=5&wgl=1&aihb=0&asro=0&ailel=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aiael=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aifxl=29_18~30_19&aiixl=29_5~30_6&aslmct=0.7&asamct=0.7&aifgd=1&aipaq=1&itsi=-1&aipecl=1&uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTI5LjAuMjc5Mi43OSIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjEyOS4wLjI3OTIuNzkiXSxbIk5vdD1BP0JyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMjkuMC42NjY4LjkwIl1dLDBd&dt=1728396360484&bpp=1&bdt=66&idt=5&shv=r20241003&mjsv=m202410030101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=7639869448362&frm=20&pv=2&u_tz=180&u_his=3&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=44759876%2C44759927%2C44759837%2C44795922%2C95343454%2C95335247&oid=2&pvsid=204179956803108&tmod=1109457163&wsm=1&uas=0&nvt=1&fsapi=1&ref=https%3A%2F%2Fpractice-automation.com%2F&fc=1920&brdim=10%2C10%2C10%2C10%2C1280%2C0%2C1296%2C808%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1.01&td=1&tdf=2&nt=1&ifi=1&uci=a!1&fsb=1&dtd=21"
+2024-10-08T14:06:00.565Z pw:api LocatorAssertions.ToHaveAccessibleNameAsync with timeout 5000ms
+2024-10-08T14:06:00.565Z pw:api waiting for GetByRole(AriaRole.Textbox, new() { Name = "Name" })
+2024-10-08T14:06:00.570Z pw:api   locator resolved to <input type="text" required="" id="name-input" name="name-input" data-cy="name-input" data-testid="name-input"/>
+2024-10-08T14:06:00.578Z pw:api LocatorAssertions.ToHaveValueAsync with timeout 5000ms
+2024-10-08T14:06:00.578Z pw:api waiting for GetByRole(AriaRole.Textbox, new() { Name = "Name" })
+2024-10-08T14:06:00.581Z pw:api   locator resolved to <input type="text" required="" id="name-input" name="name-input" data-cy="name-input" data-testid="name-input"/>
+2024-10-08T14:06:00.584Z pw:api waiting for GetByRole(AriaRole.Textbox, new() { Name = "Name" })
+2024-10-08T14:06:00.587Z pw:api   locator resolved to <input type="text" required="" id="name-input" name="name-input" data-cy="name-input" data-testid="name-input"/>
+2024-10-08T14:06:00.623Z pw:api taking page screenshot
+2024-10-08T14:06:00.629Z pw:api waiting for fonts to load...
+2024-10-08T14:06:00.630Z pw:api fonts loaded

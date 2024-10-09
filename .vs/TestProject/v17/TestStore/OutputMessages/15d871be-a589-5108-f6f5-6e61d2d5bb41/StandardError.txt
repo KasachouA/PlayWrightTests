@@ -1,0 +1,43 @@
+2024-10-09T07:19:14.965Z pw:api navigating to "https://practice-automation.com/", waiting until "load"
+2024-10-09T07:19:15.060Z pw:api   "commit" event fired
+2024-10-09T07:19:15.061Z pw:api   navigated to "https://practice-automation.com/"
+2024-10-09T07:19:15.382Z pw:api   "domcontentloaded" event fired
+2024-10-09T07:19:15.854Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/html/r20241007/r20190131/zrt_lookup_fy2021.html"
+2024-10-09T07:19:15.881Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8156930098856089&output=html&adk=293675617&adf=814277786&abgtt=7&lmt=1728458355&plat=1%3A16777216%2C3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&format=0x0&url=https%3A%2F%2Fpractice-automation.com%2F&host=ca-host-pub-2644536267352236&pra=5&wgl=1&aihb=0&asro=0&ailel=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aiael=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aifxl=29_18~30_19&aiixl=29_5~30_6&aslmct=0.7&asamct=0.7&itsi=-1&uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTI5LjAuMjc5Mi43OSIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjEyOS4wLjI3OTIuNzkiXSxbIk5vdD1BP0JyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMjkuMC42NjY4LjkwIl1dLDBd&dt=1728458355451&bpp=36&bdt=397&idt=260&shv=r20241007&mjsv=m202410030101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=2663795185566&frm=20&pv=2&u_tz=180&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=44759875%2C44759926%2C44759842%2C31087608%2C95343328%2C95343454%2C31087854%2C95340253%2C95340255&oid=2&pvsid=4491491581615519&tmod=42177267&wsm=1&uas=0&nvt=1&fsapi=1&fc=1920&brdim=10%2C10%2C10%2C10%2C1280%2C0%2C1296%2C808%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1.01&td=1&tdf=2&nt=1&ifi=1&uci=a!1&fsb=1&dtd=335"
+2024-10-09T07:19:15.896Z pw:api   "load" event fired
+2024-10-09T07:19:15.935Z pw:api waiting for Locator("//a[text() = 'Click Events']")
+2024-10-09T07:19:15.994Z pw:api   locator resolved to <a class="wp-block-button__link wp-element-button" href="https://practice-automation.com/click-events/">Click Events</a>
+2024-10-09T07:19:16.000Z pw:api attempting click action
+2024-10-09T07:19:16.000Z pw:api   waiting for element to be visible, enabled and stable
+2024-10-09T07:19:16.038Z pw:api   element is visible, enabled and stable
+2024-10-09T07:19:16.038Z pw:api   scrolling into view if needed
+2024-10-09T07:19:16.041Z pw:api   done scrolling
+2024-10-09T07:19:16.065Z pw:api   performing click action
+2024-10-09T07:19:16.095Z pw:api   click action done
+2024-10-09T07:19:16.095Z pw:api   waiting for scheduled navigations to finish
+2024-10-09T07:19:16.237Z pw:api   "commit" event fired
+2024-10-09T07:19:16.237Z pw:api   navigated to "https://practice-automation.com/click-events/"
+2024-10-09T07:19:16.237Z pw:api   navigated to "https://practice-automation.com/click-events/"
+2024-10-09T07:19:16.289Z pw:api   navigations have finished
+2024-10-09T07:19:16.317Z pw:api waiting for Locator("h2")
+2024-10-09T07:19:16.389Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/html/r20241007/r20190131/zrt_lookup_fy2021.html"
+2024-10-09T07:19:16.425Z pw:api   locator resolved to <h2 id="demo"></h2>
+2024-10-09T07:19:26.349Z pw:api   navigated to "https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-8156930098856089&output=html&adk=293675617&adf=814277786&abgtt=7&lmt=1728458356&plat=1%3A16777216%2C3%3A16%2C4%3A16%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32&format=0x0&url=https%3A%2F%2Fpractice-automation.com%2Fclick-events%2F&host=ca-host-pub-2644536267352236&pra=5&wgl=1&aihb=0&asro=0&ailel=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aiael=1~2~4~6~7~8~9~10~11~12~13~14~15~16~17~18~19~20~21~24~29~30~34&aifxl=29_18~30_19&aiixl=29_5~30_6&aslmct=0.7&asamct=0.7&itsi=-1&uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTI5LjAuMjc5Mi43OSIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjEyOS4wLjI3OTIuNzkiXSxbIk5vdD1BP0JyYW5kIiwiOC4wLjAuMCJdLFsiQ2hyb21pdW0iLCIxMjkuMC42NjY4LjkwIl1dLDBd&dt=1728458356334&bpp=4&bdt=128&idt=21&shv=r20241007&mjsv=m202410030101&ptt=9&saldr=aa&abxe=1&eoidce=1&nras=1&correlator=5100797278208&frm=20&pv=2&u_tz=180&u_his=3&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1265&bih=720&scr_x=0&scr_y=0&eid=44759875%2C44759926%2C44759842%2C44798934%2C95343328%2C95343454%2C31087854&oid=2&pvsid=1255917770687579&tmod=42177267&wsm=1&uas=0&nvt=1&fsapi=1&ref=https%3A%2F%2Fpractice-automation.com%2F&fc=1920&brdim=10%2C10%2C10%2C10%2C1280%2C0%2C1296%2C808%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1.01&td=1&tdf=2&nt=1&ifi=1&uci=a!1&fsb=1&dtd=54"
+2024-10-09T07:19:26.352Z pw:api   "domcontentloaded" event fired
+2024-10-09T07:19:26.353Z pw:api   "load" event fired
+2024-10-09T07:19:26.365Z pw:api waiting for GetByRole(AriaRole.Button, new() { Name = "Cat" })
+2024-10-09T07:19:26.367Z pw:api   navigated to "https://tpc.googlesyndication.com/sodar/sodar2/232/runner.html"
+2024-10-09T07:19:26.374Z pw:api   locator resolved to <button onclick="catSound()" class="custom_btn btn_hover">ΓÇª</button>
+2024-10-09T07:19:26.376Z pw:api attempting click action
+2024-10-09T07:19:26.376Z pw:api   waiting for element to be visible, enabled and stable
+2024-10-09T07:19:26.409Z pw:api   element is visible, enabled and stable
+2024-10-09T07:19:26.409Z pw:api   scrolling into view if needed
+2024-10-09T07:19:26.410Z pw:api   done scrolling
+2024-10-09T07:19:26.414Z pw:api   performing click action
+2024-10-09T07:19:26.421Z pw:api   click action done
+2024-10-09T07:19:26.421Z pw:api   waiting for scheduled navigations to finish
+2024-10-09T07:19:26.422Z pw:api   navigations have finished
+2024-10-09T07:19:26.427Z pw:api   navigated to "about:blank"
+2024-10-09T07:19:26.502Z pw:api taking page screenshot
+2024-10-09T07:19:26.512Z pw:api waiting for fonts to load...
+2024-10-09T07:19:26.513Z pw:api fonts loaded
