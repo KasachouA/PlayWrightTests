@@ -1,7 +1,6 @@
-﻿{
+﻿{ 
   "allure": {
     "directory": "allure-results",
-    "allowEmptySuites": true,
-    "cleanResultsDirectory": true
+    "allowEmptySuites": true
   }
 }
