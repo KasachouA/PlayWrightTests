@@ -30,7 +30,7 @@ jobs:
     - name: Run tests
       run: dotnet test --settings TestSettings.runsettings
 
-    - name: Get Allure history
+    - name: Load test report history
       if: always()
       uses: actions/checkout@v2
       continue-on-error: true
@@ -38,7 +38,7 @@ jobs:
         ref: gh-pages
         path: gh-pages
     
-    - name: Generate Allure Report
+    - name: Build test report
       if: always()
       uses: simple-elf/allure-report-action@v1.7
       with:
@@ -50,6 +50,6 @@ jobs:
       if: always()
       uses: peaceiris/actions-gh-pages@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        github_token: ${{ secrets.MY_GITHUB_TOKEN }}
         publish_dir: allure-history
         publish_branch: gh-pages
