@@ -31,10 +31,7 @@ jobs:
       run: dotnet test --settings TestSettings.runsettings
 
     - name: Current directory
-      run: ls -R
-      
-    - name: Test result directory
-      run: ls -R ./Tests/bin/Debug/net8.0
+      run: ls -R /home/runner/work/PlayWrightTests
       
     - name: Load test report history
       if: always()
