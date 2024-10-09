@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Oct 09 13:19:04 GMT 2024","Wed Oct 09 13:19:05 GMT 2024","973","","Main page","Main layout","MainPageTests","VerifyMainPageTitle","VerifyMainPageTitle",""
+"passed","Wed Oct 09 13:18:43 GMT 2024","Wed Oct 09 13:19:05 GMT 2024","21819","","Click Events Page","Main layout","ClickEventsPageTests","VerifyResponsesForButtonsClick","VerifyResponsesForButtonsClick",""
+"passed","Wed Oct 09 13:18:43 GMT 2024","Wed Oct 09 13:19:04 GMT 2024","20796","","Main page","Main layout","MainPageTests","VerifyAllButtonsPresenceOnMainPage","VerifyAllButtonsPresenceOnMainPage",""
