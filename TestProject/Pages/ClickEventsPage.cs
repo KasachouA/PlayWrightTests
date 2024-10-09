@@ -7,9 +7,6 @@ namespace CoreTestProject.Pages
     {
         private ILocator PageNameText => Page.GetByRole(AriaRole.Heading);
         private ILocator AnimalButton(string buttonName) => Page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = buttonName });
-        //private ILocator PigButton => Page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Pig" });
-        //private ILocator DogButton => Page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Dog" });
-        //private ILocator CowButton => Page.GetByRole(AriaRole.Button, new PageGetByRoleOptions { Name = "Cow" });
         private ILocator ResponseText => Page.Locator("h2");
 
 

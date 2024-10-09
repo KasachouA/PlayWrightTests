@@ -23,7 +23,7 @@ namespace Tests.UITests
         [AllureSubSuite("Main layout")]
         public async Task VerifyMainPageTitle()
         {
-            await Expect(_mainPage.PageNameText).ToHaveTextAsync("Welcome to your software automation practice website!");
+            Assert.That(await _mainPage.GetPageName(), Is.EqualTo("Welcome to your software automation practice website!"));
         }
 
         [Test]
@@ -33,7 +33,7 @@ namespace Tests.UITests
         {
             foreach (var btn in StringConstantUtil.GetAllConstants<MainPageButton>())
             {
-                await Expect(_mainPage.Button(btn)).ToBeVisibleAsync();
+                Assert.That(await _mainPage.IsButtonVisible(btn), Is.True, "{0} button is not displayed on the page", btn.Name);
             }
         }
     }

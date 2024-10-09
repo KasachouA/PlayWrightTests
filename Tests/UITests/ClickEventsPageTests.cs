@@ -32,7 +32,7 @@ namespace Tests.UITests
             foreach (var button in StringConstantUtil.GetAllConstants<Animal>()) 
             {
                 await _clickEventsPage.ClickAnimalButton(button);
-                Assert.That(await animalSound, Is.EqualTo(button.Sound));
+                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(button.Sound));
             }
         }
     }
