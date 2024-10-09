@@ -30,10 +30,11 @@ jobs:
     - name: Run tests
       run: dotnet test --settings TestSettings.runsettings
 
+    - name: Current directory
+      run: pwd
+      
     - name: Test result directory
-      run: |
-      pwd
-      ls -R ./bin/Debug/net8.0
+      run: ls -R ./bin/Debug/net8.0
       
     - name: Load test report history
       if: always()
