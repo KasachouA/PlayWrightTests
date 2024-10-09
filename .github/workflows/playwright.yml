@@ -34,7 +34,7 @@ jobs:
       run: pwd
       
     - name: Test result directory
-      run: ls -R ./bin/Debug/net8.0
+      run: ls -R ./Tests/bin/Debug/net8.0
       
     - name: Load test report history
       if: always()
@@ -50,7 +50,7 @@ jobs:
       with:
         gh_pages: gh-pages
         allure_history: allure-history
-        allure_results: bin/Debug/net8.0/allure-results
+        allure_results: Tests/bin/Debug/net8.0/allure-results
 
     - name: Publish test report
       if: always()
