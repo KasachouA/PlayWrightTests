@@ -31,7 +31,7 @@ jobs:
       run: dotnet test --settings TestSettings.runsettings
 
     - name: Current directory
-      run: ls
+      run: ls -R
       
     - name: Test result directory
       run: ls -R ./Tests/bin/Debug/net8.0
