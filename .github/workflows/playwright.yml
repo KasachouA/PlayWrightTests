@@ -30,6 +30,9 @@ jobs:
     - name: Run tests
       run: dotnet test --settings TestSettings.runsettings
 
+    - name: Test result directory
+      run: ls -R ./bin/Debug/net8.0
+      
     - name: Load test report history
       if: always()
       uses: actions/checkout@v2
