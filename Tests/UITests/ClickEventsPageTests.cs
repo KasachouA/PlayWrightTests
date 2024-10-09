@@ -35,17 +35,5 @@ namespace Tests.UITests
                 Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(button.Sound));
             }
         }
-
-        [Test]
-        [AllureOwner("Andrei Kasachou")]
-        [AllureSubSuite("Main layout")]
-        public async Task UnstableTest()
-        {
-            await _learnAndPracticeAutomationPage.ClickButton(MainPageButton.ClickEvents);
-            await _clickEventsPage.ClickAnimalButton(Animal.Dog);
-
-            var randomSound = StringConstantUtil.GetAllConstants<Animal>()[new Random().Next(0, 4)];
-            Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(randomSound.Sound));
-        }
     }
 }
