@@ -14,4 +14,7 @@
       <Channel>msedge</Channel>
     </LaunchOptions>
   </Playwright>
+	<TestRunParameters>
+		<Parameter name="TestAppUrl" value ="https://practice-automation.com/"/>
+	</TestRunParameters>
 </RunSettings>

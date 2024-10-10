@@ -18,7 +18,7 @@ namespace Tests.TestFixtures
         {
             Page = await PlaywrightPageFactory.CreatePageAsync();
 
-            await new MainPage(Page).NavigateToAsync("https://practice-automation.com/");
+            await new MainPage(Page).NavigateToAsync(TestContext.Parameters["TestAppUrl"]);
         }
 
         [TearDown]
