@@ -16,7 +16,7 @@ namespace Tests.TestFixtures
         [SetUp]
         public async Task SetUp()
         {
-            await new MainPage(Page).NavigateToAsync("https://practice-automation.com/");
+            await new MainPage(Page).NavigateToAsync(TestContext.Parameters["TestAppUrl"]);
         }
 
         [TearDown]
