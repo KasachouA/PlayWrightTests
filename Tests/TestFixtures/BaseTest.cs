@@ -1,16 +1,15 @@
 ﻿using Allure.Net.Commons;
 using Allure.NUnit;
-using CoreTestProject;
 using CoreTestProject.Pages;
+using CoreTestProject.PlaywrightInitialization;
 using Microsoft.Playwright;
-using Microsoft.Playwright.NUnit;
 using NUnit.Framework.Interfaces;
 
 namespace Tests.TestFixtures
 {
     [Parallelizable(ParallelScope.All)]
     [AllureNUnit]
-    public class BaseTest// : PageTest
+    public class BaseTest
     {
         protected IPage Page;
 
@@ -18,6 +17,7 @@ namespace Tests.TestFixtures
         public async Task SetUp()
         {
             Page = await PlaywrightPageFactory.CreatePageAsync();
+
             await new MainPage(Page).NavigateToAsync("https://practice-automation.com/");
         }
 

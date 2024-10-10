@@ -1,19 +1,14 @@
-﻿using CoreTestProject;
+﻿using CoreTestProject.PlaywrightInitialization;
 
-namespace Tests.TestFixtures
+namespace Tests
 {
     [SetUpFixture]
     public class FixtureSetup
     {
-        [OneTimeSetUp]
-        public void Setup() 
-        { 
-            //ignore
-        }
-
-        [TearDown] public void Teardown() 
+        [OneTimeTearDown]
+        public void Teardown()
         {
-            PlaywrightPageFactory.CloseBrowserAsync();
+            PlaywrightPageFactory.CloseBrowser();
         }
     }
 }

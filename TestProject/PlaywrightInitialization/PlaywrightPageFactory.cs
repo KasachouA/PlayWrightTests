@@ -1,6 +1,6 @@
 ﻿using Microsoft.Playwright;
 
-namespace CoreTestProject
+namespace CoreTestProject.PlaywrightInitialization
 {
     public static class PlaywrightPageFactory
     {
@@ -8,7 +8,7 @@ namespace CoreTestProject
         private static IBrowser _browser;
         private static readonly object _lock = new object();
 
-        private static IBrowser GetBrowserAsync(string browserType = "chromium", bool headless = true)
+        private static IBrowser GetBrowser()
         {
             if (_browser == null)
             {
@@ -17,13 +17,7 @@ namespace CoreTestProject
                     if (_browser == null)
                     {
                         _playwright = Playwright.CreateAsync().GetAwaiter().GetResult();
-
-                        _browser = browserType.ToLower() switch
-                        {
-                            "firefox" => _playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions { Headless = headless }).GetAwaiter().GetResult(),
-                            "webkit" => _playwright.Webkit.LaunchAsync(new BrowserTypeLaunchOptions { Headless = headless }).GetAwaiter().GetResult(),
-                            _ => _playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions { Headless = headless }).GetAwaiter().GetResult(),
-                        };
+                        _browser = _playwright[Configuration.GetBrowserType()].LaunchAsync(Configuration.GetBrowserLaunchOptions()).GetAwaiter().GetResult();
                     }
                 }
             }
@@ -31,15 +25,15 @@ namespace CoreTestProject
             return _browser;
         }
 
-        public static async Task<IPage> CreatePageAsync(string browserType = "firefox", bool headless = false)
+        public static async Task<IPage> CreatePageAsync()
         {
-            var browser = GetBrowserAsync(browserType, headless);
-            var context = await browser.NewContextAsync();
+            var browser = GetBrowser();
+            var context = await browser.NewContextAsync(Configuration.GetBrowserNewContextOptions());
             var page = await context.NewPageAsync();
             return page;
         }
 
-        public static void CloseBrowserAsync()
+        public static void CloseBrowser()
         {
             if (_browser != null)
             {
@@ -49,7 +43,7 @@ namespace CoreTestProject
                     {
                         _browser.CloseAsync().GetAwaiter().GetResult();
                         _browser = null;
-                 
+
                         _playwright.Dispose();
                         _playwright = null;
                     }
