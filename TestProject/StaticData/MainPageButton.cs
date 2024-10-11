@@ -1,4 +1,4 @@
-﻿using System.Reflection;
+﻿using CoreTestProject.Utils;
 
 namespace CoreTestProject.StaticData
 {
@@ -27,5 +27,9 @@ namespace CoreTestProject.StaticData
         public static MainPageButton BrokenImages = new MainPageButton("Broken Images");
         public static MainPageButton BrokenLinks = new MainPageButton("Broken Links");
         public static MainPageButton Accordions = new MainPageButton("Accordions");
+
+        public static List<string> GetNamesList() => StringConstantUtil
+            .GetAllConstants<MainPageButton>()
+            .Select(x => x.Name).ToList();
     }
 }
