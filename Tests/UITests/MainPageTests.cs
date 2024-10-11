@@ -1,7 +1,6 @@
 ﻿using Allure.NUnit.Attributes;
 using CoreTestProject.Pages;
 using CoreTestProject.StaticData;
-using CoreTestProject.Utils;
 using Tests.TestFixtures;
 
 namespace Tests.UITests
@@ -15,7 +14,7 @@ namespace Tests.UITests
         [SetUp]
         public void TestSetup()
         {
-            _mainPage = new MainPage(Page);
+            _mainPage = GetPage<MainPage>();
         }
 
         [Test]
@@ -31,10 +30,7 @@ namespace Tests.UITests
         [AllureSubSuite("Main layout")]
         public async Task VerifyAllButtonsPresenceOnMainPage()
         {
-            foreach (var btn in StringConstantUtil.GetAllConstants<MainPageButton>())
-            {
-                Assert.That(await _mainPage.IsButtonVisible(btn), Is.True, "{0} button is not displayed on the page", btn.Name);
-            }
+            Assert.That(await _mainPage.GetButtonNamesOnPage(), Is.EquivalentTo(MainPageButton.GetNamesList()));
         }
     }
 }
