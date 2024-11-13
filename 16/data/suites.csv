@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","19109","VerifyResponsesForButtonsClick","","Wed Nov 13 15:34:03 GMT 2024","passed","Wed Nov 13 15:34:22 GMT 2024","Main layout","Click Events Page","ClickEventsPageTests","VerifyResponsesForButtonsClick"
+"","1745","VerifyMainPageTitle","","Wed Nov 13 15:34:20 GMT 2024","passed","Wed Nov 13 15:34:22 GMT 2024","Main layout","Main page","MainPageTests","VerifyMainPageTitle"
+"","17304","VerifyAllButtonsPresenceOnMainPage","","Wed Nov 13 15:34:03 GMT 2024","passed","Wed Nov 13 15:34:20 GMT 2024","Main layout","Main page","MainPageTests","VerifyAllButtonsPresenceOnMainPage"
