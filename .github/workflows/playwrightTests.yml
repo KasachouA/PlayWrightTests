@@ -41,7 +41,7 @@ jobs:
     
     - name: Build test report
       if: always()
-      uses: simple-elf/allure-report-action@v1.7
+      uses: simple-elf/allure-report-action@v1.11
       with:
         gh_pages: gh-pages
         allure_history: allure-history
