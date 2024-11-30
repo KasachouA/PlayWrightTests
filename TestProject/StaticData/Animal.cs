@@ -19,7 +19,7 @@ namespace CoreTestProject.StaticData
                 .Select(x => (Animal)x.GetValue(typeof(Animal))).ToList();
         }
 
-        public static Animal FormFields = new Animal("Cat", "Meow!");
+        public static Animal Cat = new Animal("Cat", "Meow!");
         public static Animal Dog = new Animal("Dog", "Woof!");
         public static Animal Pig = new Animal("Pig", "Oink!");
         public static Animal Cow = new Animal("Cow", "Moo!");

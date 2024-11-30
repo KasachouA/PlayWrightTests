@@ -1,7 +1,6 @@
 ﻿using Allure.NUnit.Attributes;
 using CoreTestProject.Pages;
 using CoreTestProject.StaticData;
-using CoreTestProject.Utils;
 using Tests.TestFixtures;
 
 namespace Tests.UITests
@@ -15,8 +14,8 @@ namespace Tests.UITests
         [SetUp]
         public void TestSetup()
         {
-            _learnAndPracticeAutomationPage = new MainPage(Page);
-            _clickEventsPage = new ClickEventsPage(Page);
+            _learnAndPracticeAutomationPage = GetPage<MainPage>();
+            _clickEventsPage = GetPage<ClickEventsPage>();
         }
 
         [Test]
@@ -25,15 +24,21 @@ namespace Tests.UITests
         public async Task VerifyResponsesForButtonsClick()
         {
             await _learnAndPracticeAutomationPage.ClickButton(MainPageButton.ClickEvents);
-            var animalSound = _clickEventsPage.GetResponseText();
 
-            Assert.That(await animalSound, Is.Empty);
-
-            foreach (var button in StringConstantUtil.GetAllConstants<Animal>()) 
+            await Assert.MultipleAsync(async () =>
             {
-                await _clickEventsPage.ClickAnimalButton(button);
-                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(button.Sound));
-            }
+                await _clickEventsPage.ClickAnimalButton(Animal.Cow);
+                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(Animal.Cow.Sound));
+
+                await _clickEventsPage.ClickAnimalButton(Animal.Cat);
+                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(Animal.Cat.Sound));
+
+                await _clickEventsPage.ClickAnimalButton(Animal.Dog);
+                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(Animal.Dog.Sound));
+
+                await _clickEventsPage.ClickAnimalButton(Animal.Pig);
+                Assert.That(await _clickEventsPage.GetResponseText(), Is.EqualTo(Animal.Pig.Sound));
+            });
         }
     }
 }
