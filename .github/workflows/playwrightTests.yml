@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule: ## Schedule the job to run every Thursday at 3 am CET (2 am UTC)
+    - cron: '30 11 * * 1'
   pull_request:
     branches:
       - master
