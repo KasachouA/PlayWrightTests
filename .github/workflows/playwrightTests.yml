@@ -1,11 +1,9 @@
 name: Playwright UI Tests
 
 on:
-  ##push:
-   ## branches:
-   ##   - master
-  schedule: ## Schedule the job to run every Thursday at 3 am CET (2 am UTC)
-    - cron: '15 11 * * 1'
+  push:
+    branches:
+      - master
   pull_request:
     branches:
       - master
