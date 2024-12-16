@@ -5,7 +5,7 @@ on:
    ## branches:
    ##   - master
   schedule: ## Schedule the job to run every Thursday at 3 am CET (2 am UTC)
-    - cron: '40 10 * * 1'
+    - cron: '55 12 * * 1'
   pull_request:
     branches:
       - master
