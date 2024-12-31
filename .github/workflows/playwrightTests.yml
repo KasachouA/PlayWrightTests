@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  REPO_NAME: GITHUB_REPOSITORY
+  REPO_NAME: ${{GITHUB_REPOSITORY}}
   
 jobs:
   tests:
