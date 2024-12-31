@@ -8,15 +8,15 @@ on:
     branches:
       - master
   workflow_dispatch:
-
-env:
-  REPO_NAME: ${{github.repository##*/}}
-  
+ 
 jobs:
   tests:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Set repository name
+      run: echo "REPO_NAME=$(basename $(echo ${{ github.repository }}))" >> $GITHUB_ENV
+    
     - name: Checkout code
       uses: actions/checkout@v4
 
