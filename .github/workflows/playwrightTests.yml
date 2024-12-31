@@ -59,4 +59,4 @@ jobs:
         publish_branch: gh-pages
         
     - name: repo name
-      run: echo env.REPO_NAME
+      run: echo ${{env.REPO_NAME}}
