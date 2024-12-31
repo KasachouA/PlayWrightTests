@@ -8,6 +8,9 @@ on:
     branches:
       - master
   workflow_dispatch:
+
+env:
+  REPO_NAME:${{GITHUB_REPOSITORY##*/}}
   
 jobs:
   tests:
@@ -54,3 +57,6 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: allure-history
         publish_branch: gh-pages
+        
+    - name: repo name
+      run: echo env.REPO_NAME
