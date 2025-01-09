@@ -9,7 +9,7 @@ on:
       - master
   workflow_dispatch:
 env:
-  REPO_NAME: "" #it set up in the 1st step
+  REPO_NAME: ${{github.event.repository.name}} #it set up in the 1st step
 jobs:
   tests:
     runs-on: ubuntu-latest
